@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empleado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .header {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .logo {
+            max-width: 200px;
+        }
+        .section-title {
+            border-bottom: 1px solid #000;
+            padding-bottom: 10px;
+            margin: 30px 0 20px;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .form-field {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            background-color: #2196F3;
+            color: white;
+            padding: 10px 40px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background-color: #1976D2;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="/api/placeholder/200/50" alt="UNICOLOMBO" class="logo">
+        <h1>Registro de Empleado</h1>
+    </div>
+
+    <form>
+        <h2 class="section-title">Datos Personales</h2>
+        <div class="form-grid">
+            <div class="form-field">
+                <label>Tipo de documento</label>
+                <select>
+                    <option value="">Seleccione tipo</option>
+                    <option value="cc">Cédula de Ciudadanía</option>
+                    <option value="ce">Cédula de Extranjería</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label>Número de documento</label>
+                <input type="text">
+            </div>
+            <div class="form-field">
+                <label>Primer nombre</label>
+                <input type="text">
+            </div>
+            <div class="form-field">
+                <label>Segundo nombre</label>
+                <input type="text">
+            </div>
+            <div class="form-field">
+                <label>Primer apellido</label>
+                <input type="text">
+            </div>
+            <div class="form-field">
+                <label>Segundo apellido</label>
+                <input type="text">
+            </div>
+            <div class="form-field">
+                <label>Teléfono</label>
+                <input type="tel">
+            </div>
+            <div class="form-field">
+                <label>Celular</label>
+                <input type="tel">
+            </div>
+            <div class="form-field">
+                <label>E-mail</label>
+                <input type="email">
+            </div>
+            <div class="form-field">
+                <label>Fecha de nacimiento</label>
+                <input type="date">
+            </div>
+            <div class="form-field">
+                <label>Género</label>
+                <select>
+                    <option value="">Seleccione género</option>
+                    <option value="m">Masculino</option>
+                    <option value="f">Femenino</option>
+                    <option value="o">Otro</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label>Municipio residencia</label>
+                <select>
+                    <option value="">Seleccione municipio</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label>Departamento residencia</label>
+                <select>
+                    <option value="">Seleccione departamento</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label>Dirección</label>
+                <input type="text">
+            </div>
+        </div>
+
+        <h2 class="section-title">Datos laborales</h2>
+        <div class="form-grid">
+            <div class="form-field">
+                <label>Seleccionar empresa</label>
+                <select>
+                    <option value="">Seleccione empresa</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label>Cargo</label>
+                <input type="text">
+            </div>
+            <div class="form-field">
+                <label>Dependencia</label>
+                <input type="text">
+            </div>
+            <div class="form-field">
+                <label>Estado</label>
+                <input type="text">
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <button type="submit" class="submit-btn">ENVIAR</button>
+        </div>
+    </form>
+</body>
+</html>

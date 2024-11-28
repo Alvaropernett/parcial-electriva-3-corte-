@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de programa académico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .header {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .logo {
+            max-width: 200px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .form-field {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: normal;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .checkbox-group {
+            margin: 20px 0;
+        }
+        .duration-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .duration-input {
+            width: 80px !important;
+        }
+        .submit-btn {
+            background-color: #2196F3;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #1976D2;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="/api/placeholder/200/50" alt="UNICOLOMBO" class="logo">
+        <h1>Registro de programa académico</h1>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <div class="form-field">
+                <label>Nombre Del Programa *</label>
+                <input type="text" required>
+            </div>
+            <div class="form-field">
+                <label>Nombre Abreviado</label>
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-field">
+                <label>Codigo Institucional *</label>
+                <input type="text" required>
+            </div>
+            <div class="form-field">
+                <label>Nivel De Formación *</label>
+                <select required>
+                    <option value="">Seleccione nivel</option>
+                    <option value="pregrado">Pregrado</option>
+                    <option value="posgrado">Posgrado</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-field">
+                <label>Programa Academico *</label>
+                <input type="text" required>
+            </div>
+            <div class="form-field">
+                <label>SNIES</label>
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-field">
+                <label>Coordinador Academico *</label>
+                <select required>
+                    <option value="">Seleccione coordinador</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label>Estado *</label>
+                <select required>
+                    <option value="">Seleccione estado</option>
+                    <option value="activo">Activo</option>
+                    <option value="inactivo">Inactivo</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" checked> Realizar prácticas
+            </label>
+        </div>
+
+        <div class="duration-group">
+            <label>Duración</label>
+            <input type="number" class="duration-input" value="0">
+            <span>Meses</span>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <button type="submit" class="submit-btn">Agregar</button>
+        </div>
+    </form>
+</body>
+</html>
